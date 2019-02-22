@@ -19,7 +19,8 @@ body {
   text-align: left;
 }
 
-.visually-hidden:not(:focus):not(:active) {
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -54,7 +55,9 @@ img {
 }
 
 .inner-page .main-header {
+  position: absolute;
   text-align: center;
+  width: 1200px;
 }
 
 .main-navigation {
@@ -62,6 +65,10 @@ img {
   padding: 0 73px;
   background-color: #ffffff;
   margin-bottom: 75px;
+}
+
+.inner-page .main-navigation {
+  margin-bottom: 0;
 }
 
 .main-header-logo {
@@ -399,40 +406,301 @@ img {
   background-color: #5496bd;
 }
 
+.inner-page .filters {
+  color: #ffffff;
+  background-image: url("../img/filter background.jpg");
+  background-color: #81b3d2;
+}
+
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 69px;
+  padding-top: 85px;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.filter ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 41px;
+}
+
+.filter fieldset {
+  border: none;
+  padding: 0;
+  width: 226px;
+}
+
+.filter .filter-range {
+  width: 317px;
+}
+
+.filter fieldset:nth-child(2) {
+  width: 226px;
+  padding-left: 15px;
+  margin-right: 245px;
+}
+
+.filter legend {
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+.filter-range legend {
+  margin-bottom: 9px;
+}
+
+.price-controls label {
+  display: inline-block;
+  line-height: 21px;
+  vertical-align: top;
+  cursor: pointer;
+}
+
+.price-controls .min-price,
+.price-controls .max-price {
+  width: 78px;
+  padding-left: 65px;
+  padding-top: 4px;
+}
+
+.price-controls input {
+  width: 50px;
+  margin: 0;
+  color: inherit;
+  font: inherit;
+  background: none;
+  border: none;
+}
+
+.filter .filter-option {
+  margin-bottom: 23px;
+}
+
+.filter .filter-option:last-child {
+  margin-bottom: 31px;
+}
+
+.filter .filter-price {
+  width: 328px;
+}
+
+.filter-option label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+}
+
+.filter-input-checkbox+label::before {
+  content: "";
+  position: absolute;
+  left: -40px;
+  top: -1px;
+  width: 27px;
+  height: 23px;
+  background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.filter-input-checkbox:checked+label::after {
+  content: "";
+  position: absolute;
+  left: -40px;
+  top: -1px;
+  width: 27px;
+  height: 23px;
+  background-image: url("../img/checkbox-on.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.price-controls {
+  position: relative;
+  height: 32px;
+  margin-bottom: 20px;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+}
+
+.price-controls::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 22px;
+  background: #ffffff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.range-controls {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+  background: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  top: -9px;
+  width: 4px;
+  height: 4px;
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.range-toggle:hover {
+  background: #1c4f80;
+}
+
+.range-toggle-min {
+  left: 0;
+}
+
+.range-toggle-max {
+  left: 80%;
+}
+
+.btn-transparent {
+  display: block;
+  margin-left: 83px;
+  padding: 6px 33px;
+  line-height: 20px;
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.btn-transparent:hover {
+  color: #000000;
+  background: #ffffff;
+}
+
+.search-sorting {
+  margin: 0 73px;
+  display: flex;
+  align-items: center;
+  padding-top: 18px;
+  padding-bottom: 16px;
+}
+
+.search-sorting h3 {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: normal;
+}
+
+.search-sorting ul {
+  display: flex;
+  list-style: none;
+  margin-right: auto;
+}
+
+.sorting-list a {
+  font: inherit;
+  font-size: 12px;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.sorting-list a:hover {
+  color: #81b3d2;
+}
+
+.sorting-list a:focus {
+  color: #000000;
+}
+
+.sorting-item-current a {
+  color: #81b3d2;
+}
+
+.sorting-up {
+  margin-right: 10px;
+}
+
+.sorting-direction-link path {
+  fill: rgba(0, 0, 0, 0.3);
+}
+
+.sorting-direction-link:hover path {
+  fill: #000000;
+}
+
+.sorting-direction-link:focus path {
+  fill: #81b3d2;
+}
+
+.sorting-current path {
+  fill: #81b3d2;
+}
+
+.sorting-list li {
+  margin-right: 34px;
+}
+
+.search-result {
+  font-size: 21px;
+  font-weight: bold;
+  margin-right: 43px;
+}
+
 .hotels-list {
   display: flex;
   flex-direction: column;
   list-style: none;
-  margin: 0 73px;
+  margin: 0;
   padding: 0;
 }
 
 .hotel-item {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-bottom: 60px;
+  padding-top: 17px;
+  padding-bottom: 30px;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  padding-left: 73px;
+  padding-right: 73px;
 }
 
 .hotel-item-image {
+  display: flex;
   margin: 0;
   padding: 0;
   width: 135px;
+  padding-top: 12px;
 }
 
 .hotel-detals {
   width: 290px;
   padding-left: 30px;
   margin-right: auto;
-}
-
-.hotel-item:last-child {
-  margin-bottom: 30px;
+  padding-top: 7px;
 }
 
 .hotel-item h3 {
   margin: 0;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   font-size: 21px;
   font-weight: bold;
   color: #000000;
@@ -453,16 +721,16 @@ img {
 
 .category {
   display: inline-block;
-  width: 115px;
+  width: 111px;
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 11px;
 }
 
 .hotel-info {
   display: inline-block;
   width: 110px;
   margin: 0;
-  margin-right: 5px;
+  margin-right: 2px;
   padding-top: 3px;
   padding-bottom: 3px;
   font-size: 14px;
@@ -501,6 +769,14 @@ img {
   color: rgba(255, 255, 255, 0.3);
 }
 
+.rating svg {
+  margin-right: 2px;
+}
+
+.rating svg:last-child {
+  margin-right: 0px;
+}
+
 .rating {
   text-align: right;
 }
@@ -517,7 +793,8 @@ img {
 
 .stars {
   display: block;
-  margin-bottom: 45px;
+  margin-bottom: 35px;
+  padding-top: 10px;
 }
 
 .main-footer {

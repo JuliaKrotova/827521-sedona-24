@@ -35,15 +35,15 @@
             <ul>
               <li class="filter-option">
                 <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="pool" id="filter-pool" checked>
-                <label for="pool">бассейн</label>
+                <label for="filter-pool">бассейн</label>
               </li>
               <li class="filter-option">
                 <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="parking" id="filter-parking">
-                <label for="parking">парковка</label>
+                <label for="filter-parking">парковка</label>
               </li>
               <li class="filter-option">
                 <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="wi-fi" id="filter-wi-fi">
-                <label for="pool">wi-fi</label>
+                <label for="filter-wi-fi">wi-fi</label>
               </li>
             </ul>
           </fieldset>
@@ -52,36 +52,40 @@
             <ul>
               <li class="filter-option">
                 <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="hotel" id="filter-hotel" checked>
-                <label for="pool">гостиница</label>
+                <label for="filter-hotel">гостиница</label>
               </li>
               <li class="filter-option">
                 <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="motel" id="filter-motel" checked>
-                <label for="parking">мотель</label>
+                <label for="filter-motel">мотель</label>
               </li>
               <li class="filter-option">
                 <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="apartments" id="filter-apartments" checked>
-                <label for="pool">апартаменты</label>
+                <label for="filter-apartments">апартаменты</label>
               </li>
             </ul>
           </fieldset>
-          <fieldset>
+          <fieldset class="filter-range">
             <legend>стоимость в сутки (р):</legend>
-            <div class="filter-number">
-              <b>от</b> <input type="text" name="min-price" value="0">
-              <span class="separator"></span>
-              <b>до</b> <input type="text" name="max-price" value="3000">
+            <div class="price-controls">
+              <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+              <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
             </div>
-            <div class="filter-marker">
-              <button type="button" class="min-marker" aria-label="минимальный маркер сортировки"></button>
-              <button type="button" class="max-marker" aria-label="максимальный маркер сортировки"></button>
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar"></div>
+              </div>
+              <div class="range-toggle range-toggle-min"></div>
+              <div class="range-toggle range-toggle-max"></div>
             </div>
+            <button type="submit" class="btn-transparent button">Показать</button>
           </fieldset>
-          <button type="submit" class="filter-button button">Показать</button>
         </form>
       </section>
       <section class="search-sorting">
-        <span class="search-result">Найдено:3</span>
-        <h3 class="sorting-title">Сортировка</h3>
+        <div class="search-result">
+          Найдено: <span class="search-result-number">3</span>
+        </div>
+        <h3>Сортировка:</h3>
         <ul class="sorting-list">
           <li class="sorting-item-current">
             <a href="#">по цене</a>
@@ -94,8 +98,13 @@
           </li>
         </ul>
         <span class="sorting-direction">
-          <a class="sorting-up" href="#" aria-label="сортировка вверх"></a>
-          <a class="sorting-down" href="#" aria-label="сортировка вниз"></a>
+          <a class="sorting-direction-link sorting-up" href="#" aria-label="сортировка вверх">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+              <path fill="#231F20" d="M5.5 0L0 10h11z" /></svg>
+          </a>
+          <a class="sorting-direction-link sorting-down sorting-current" href="#" aria-label="сортировка вниз">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+              <path fill="#231F20" d="M5.5 10L0 0h11" /></svg></a>
         </span>
       </section>
       <section class="hotels">
