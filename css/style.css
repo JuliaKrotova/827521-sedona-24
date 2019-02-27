@@ -851,6 +851,7 @@ img {
 
 .main-footer iframe {
   position: absolute;
+  border: 0;
 }
 
 .main-footer .hashtag {
