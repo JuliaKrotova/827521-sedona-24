@@ -47,6 +47,7 @@ img {
 }
 
 .main-page-header {
+  background-color: #3c7098;
   background-image: url("../img/polygon.png"), url("../img/background photo.png");
   background-repeat: no-repeat, no-repeat;
   background-position: bottom -2px left -1px, top;
@@ -61,6 +62,9 @@ img {
 }
 
 .main-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   padding: 0 73px;
   background-color: #ffffff;
@@ -81,6 +85,9 @@ img {
 }
 
 .site-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -146,6 +153,9 @@ img {
 
 .features-list,
 .features-town {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-wrap: wrap;
   margin: 0;
@@ -161,6 +171,11 @@ img {
 }
 
 .feature-item-full-width {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
   width: 100%;
 }
 
@@ -170,8 +185,8 @@ img {
   width: 400px;
 }
 
-.feature-item-wrapper {
-  display: flex;
+.feature-item-full-width img {
+  align-self: center;
 }
 
 .feature-item h3 {
@@ -193,13 +208,20 @@ img {
 }
 
 .feature-comment {
-  width: 310px;
+  width: 280px;
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 60px;
 }
 
+.feature-item-full-width .feature-comment {
+  width: 305px;
+}
+
 .features-town {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
 }
 
@@ -220,6 +242,9 @@ img {
 .icon {
   line-height: 0;
   height: 160px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -261,6 +286,7 @@ img {
   margin: 0 auto;
   padding: 30px 0;
   display: inline-block;
+  vertical-align: middle;
   position: relative;
 }
 
@@ -272,6 +298,16 @@ img {
 .title-button:active {
   background-color: #503e33;
   color: rgba(255, 255, 255, 0.3);
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    transform: translateY(-86px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 @keyframes bounce {
@@ -300,6 +336,9 @@ img {
 }
 
 .search-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-wrap: wrap;
   width: 460px;
@@ -308,6 +347,9 @@ img {
 
 .search-item {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   margin-top: 0;
   margin-bottom: 30px;
@@ -367,6 +409,9 @@ img {
 }
 
 .form-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -435,6 +480,9 @@ img {
 }
 
 .filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -478,6 +526,7 @@ img {
 
 .price-controls label {
   display: inline-block;
+  vertical-align: middle;
   line-height: 21px;
   vertical-align: top;
   cursor: pointer;
@@ -518,7 +567,8 @@ img {
   user-select: none;
 }
 
-.filter-input-checkbox+label::before {
+.filter-input-checkbox+label::before,
+.filter-input-checkbox:hover+label::before {
   content: "";
   position: absolute;
   left: -40px;
@@ -530,7 +580,8 @@ img {
   background-position: 0 0;
 }
 
-.filter-input-checkbox:checked+label::after {
+.filter-input-checkbox:checked+label::after,
+.filter-input-checkbox:checked:hover+label::after {
   content: "";
   position: absolute;
   left: -40px;
@@ -540,6 +591,14 @@ img {
   background-image: url("../img/checkbox-on.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+}
+
+.filter-input-checkbox:disabled+label::before {
+  background-image: url("../img/checkbox-off-disabled.svg");
+}
+
+.filter-input-checkbox:disabled+label::after {
+  background-image: url("../img/checkbox-on-disabled.svg");
 }
 
 .price-controls {
@@ -619,6 +678,9 @@ img {
 
 .search-sorting {
   margin: 0 73px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   align-items: center;
   padding-top: 18px;
@@ -632,6 +694,9 @@ img {
 }
 
 .search-sorting ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   list-style: none;
   margin-right: auto;
@@ -687,6 +752,9 @@ img {
 }
 
 .hotels-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-direction: column;
   list-style: none;
@@ -695,6 +763,9 @@ img {
 }
 
 .hotel-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   justify-content: space-between;
   padding-top: 17px;
@@ -706,6 +777,9 @@ img {
 }
 
 .hotel-item-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   margin: 0;
   padding: 0;
@@ -743,6 +817,7 @@ img {
 
 .category {
   display: inline-block;
+  vertical-align: baseline;
   width: 111px;
   margin: 0;
   margin-bottom: 11px;
@@ -750,6 +825,7 @@ img {
 
 .hotel-info {
   display: inline-block;
+  vertical-align: middle;
   width: 110px;
   margin: 0;
   margin-right: 2px;
@@ -773,6 +849,7 @@ img {
 
 .book {
   display: inline-block;
+  vertical-align: middle;
   margin: 0;
   padding-top: 3px;
   padding-bottom: 3px;
@@ -821,12 +898,18 @@ img {
 
 .main-footer {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .inner-page .main-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-direction: row;
   margin: 0 auto;
@@ -838,6 +921,10 @@ img {
 .main-footer .container {
   position: absolute;
   bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   align-items: center;
   margin: 0 auto;
@@ -865,6 +952,9 @@ img {
 }
 
 .footer-social ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -875,6 +965,9 @@ img {
 }
 
 .social-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -896,6 +989,9 @@ img {
 }
 
 .footer-copyright {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   justify-content: center;
   align-items: center;
