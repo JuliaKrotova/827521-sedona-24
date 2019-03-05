@@ -6,13 +6,15 @@ body {
   text-transform: uppercase;
   text-align: center;
   width: 100%;
+  background-color: #f2f2f2;
 }
 
 .body-container {
+  background-color: white;
   width: 1200px;
   margin: 0 auto;
-  box-shadow: 40px 0 0 0 #f2f2f2,
-    -40px 0 0 0 #f2f2f2;
+  box-shadow: 10px 0 10px 0px #dbdbdb,
+    -10px 0 10px 0px #dbdbdb;
 }
 
 .inner-page {
@@ -143,7 +145,9 @@ img {
   font-size: 21px;
   font-weight: bold;
   width: 620px;
-  margin: 0 auto;
+  margin-top: 0;
+  margin-right: auto;
+  margin-left: auto;
   margin-bottom: 28px;
 }
 
@@ -190,14 +194,14 @@ img {
 }
 
 .feature-item h3 {
-  line-height: 21px;
   font-size: 21px;
   font-weight: bold;
+  line-height: 21px;
+  width: 165px;
   margin-top: 45px;
-  margin-bottom: 25px;
-  width: 160px;
-  margin-left: auto;
   margin-right: auto;
+  margin-bottom: 25px;
+  margin-left: auto;
 }
 
 .feature-item b {
@@ -240,14 +244,14 @@ img {
 }
 
 .icon {
-  line-height: 0;
-  height: 160px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  line-height: 0;
+  height: 160px;
 }
 
 .icon>svg {
@@ -256,10 +260,10 @@ img {
 
 .search-hotel .interesting {
   display: block;
-  margin-bottom: 25px;
   font-size: 30px;
   line-height: 36px;
   font-weight: bold;
+  margin-bottom: 25px;
 }
 
 .search-hotel .search-offer {
@@ -280,14 +284,14 @@ img {
 }
 
 .title-button {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
   font-size: 21px;
   width: 570px;
   background-color: #766357;
   margin: 0 auto;
   padding: 30px 0;
-  display: inline-block;
-  vertical-align: middle;
-  position: relative;
 }
 
 .title-button:hover {
@@ -295,7 +299,7 @@ img {
   z-index: 2;
 }
 
-.title-button:active {
+.title-button:focus {
   background-color: #503e33;
   color: rgba(255, 255, 255, 0.3);
 }
@@ -321,10 +325,10 @@ img {
 }
 
 .search-form {
-  display: none;
   position: absolute;
-  z-index: 1;
   left: 475px;
+  z-index: 1;
+  display: none;
   background-color: #ffffff;
   width: 570px;
   margin: 0 auto;
@@ -495,7 +499,7 @@ img {
 .filter ul {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin-top: 0;
   margin-left: 41px;
 }
 
@@ -593,6 +597,10 @@ img {
   background-position: 0 0;
 }
 
+.filter-input-checkbox:focus+label::before {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
 .filter-input-checkbox:disabled+label::before {
   background-image: url("../img/checkbox-off-disabled.svg");
 }
@@ -671,7 +679,8 @@ img {
   cursor: pointer;
 }
 
-.btn-transparent:hover {
+.btn-transparent:hover,
+.btn-transparent:focus {
   color: #000000;
   background: #ffffff;
 }
@@ -770,10 +779,10 @@ img {
   justify-content: space-between;
   padding-top: 17px;
   padding-bottom: 30px;
+  padding-right: 73px;
+  padding-left: 73px;
   border-top: 1px solid #e5e5e5;
   border-bottom: 1px solid #e5e5e5;
-  padding-left: 73px;
-  padding-right: 73px;
 }
 
 .hotel-item-image {
@@ -781,21 +790,20 @@ img {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  margin: 0;
-  padding: 0;
   width: 135px;
   padding-top: 12px;
+  margin: 0;
 }
 
 .hotel-detals {
   width: 290px;
   padding-left: 30px;
-  margin-right: auto;
   padding-top: 7px;
+  margin-right: auto;
 }
 
 .hotel-item h3 {
-  margin: 0;
+  margin-top: 0;
   margin-bottom: 5px;
   font-size: 21px;
   font-weight: bold;
@@ -815,11 +823,10 @@ img {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.category {
+.category-price {
   display: inline-block;
-  vertical-align: baseline;
+  vertical-align: middle;
   width: 111px;
-  margin: 0;
   margin-bottom: 11px;
 }
 
@@ -827,7 +834,6 @@ img {
   display: inline-block;
   vertical-align: middle;
   width: 110px;
-  margin: 0;
   margin-right: 2px;
   padding-top: 3px;
   padding-bottom: 3px;
@@ -842,7 +848,7 @@ img {
   background-color: #669ec0;
 }
 
-.hotel-info:active {
+.hotel-info:focus {
   background-color: #5496bd;
   color: rgba(255, 255, 255, 0.3);
 }
@@ -850,7 +856,6 @@ img {
 .book {
   display: inline-block;
   vertical-align: middle;
-  margin: 0;
   padding-top: 3px;
   padding-bottom: 3px;
   width: 142px;
@@ -863,7 +868,7 @@ img {
   background-color: #604e43;
 }
 
-.book:active {
+.book:focus {
   background-color: #503e33;
   color: rgba(255, 255, 255, 0.3);
 }
@@ -915,7 +920,6 @@ img {
   margin: 0 auto;
   padding: 35px 0;
   text-align: center;
-  padding: 35px 0;
 }
 
 .main-footer .container {
