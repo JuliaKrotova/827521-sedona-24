@@ -197,11 +197,15 @@ img {
   font-size: 21px;
   font-weight: bold;
   line-height: 21px;
-  width: 165px;
+  width: 160px;
   margin-top: 45px;
   margin-right: auto;
   margin-bottom: 25px;
   margin-left: auto;
+}
+
+.feature-item .bridge {
+  width: 175px;
 }
 
 .feature-item b {
@@ -258,6 +262,10 @@ img {
   margin-bottom: 30px;
 }
 
+.search-hotel {
+  position: relative;
+}
+
 .search-hotel .interesting {
   display: block;
   font-size: 30px;
@@ -284,7 +292,6 @@ img {
 }
 
 .title-button {
-  position: relative;
   display: inline-block;
   vertical-align: middle;
   font-size: 21px;
@@ -326,7 +333,7 @@ img {
 
 .search-form {
   position: absolute;
-  left: 475px;
+  left: 315px;
   z-index: 1;
   display: none;
   background-color: #ffffff;
