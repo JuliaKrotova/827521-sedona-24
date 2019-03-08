@@ -35,11 +35,23 @@
     if (childrenStorage) {
       children.value = childrenStorage;
     }
+    arrivalDate.classList.remove("input-invalid");
+    departureDate.classList.remove("input-invalid");
+    adults.classList.remove("input-invalid");
+    children.classList.remove("input-invalid");
+    popup.classList.remove("modal-error");
   });
 
   popup.addEventListener("submit", function(evt) {
+    arrivalDate.classList.remove("input-invalid");
+    departureDate.classList.remove("input-invalid");
+    adults.classList.remove("input-invalid");
+    children.classList.remove("input-invalid");
     if (!arrivalDate.value || !departureDate.value || !adults.value || !children.value) {
       evt.preventDefault();
+      popup.classList.remove("modal-error");
+      popup.offsetWidth = popup.offsetWidth;
+      popup.classList.add("modal-error");
       if (!arrivalDate.value) {
         arrivalDate.classList.add("input-invalid");
       }
@@ -68,6 +80,7 @@
       evt.preventDefault();
       if (popup.classList.contains("search-form-show")) {
         popup.classList.remove("search-form-show");
+        popup.classList.remove("input-invalid");
       }
     }
   });

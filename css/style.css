@@ -204,6 +204,30 @@ img {
   margin-left: auto;
 }
 
+.feature-tittle::before {
+  display: block;
+  content: "";
+  background-repeat: no-repeat;
+  background-position: bottom;
+  height: 130px;
+  width: 75px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.accommodation .feature-tittle::before {
+  background-image: url("../img/icon1.svg");
+}
+
+.food .feature-tittle::before {
+  background-image: url("../img/icon3.svg");
+}
+
+.souvenirs .feature-tittle::before {
+  background-image: url("../img/icon2.svg");
+}
+
 .feature-item .bridge {
   width: 175px;
 }
@@ -247,19 +271,9 @@ img {
   margin-bottom: 82px;
 }
 
-.icon {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  line-height: 0;
-  height: 160px;
-}
-
-.icon>svg {
-  margin-bottom: 30px;
+.feature-item svg {
+  margin-top: 58px;
+  margin-bottom: 24px;
 }
 
 .search-hotel {
@@ -331,6 +345,52 @@ img {
   }
 }
 
+@-webkit-keyframes shake {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
+@keyframes shake {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
 .search-form {
   position: absolute;
   left: 315px;
@@ -388,6 +448,10 @@ img {
 
 .input-invalid {
   outline: solid #dc3545;
+}
+
+.modal-error {
+  animation: shake 0.6s;
 }
 
 .search-item input {
